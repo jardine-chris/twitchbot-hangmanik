@@ -5,29 +5,44 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link type="text/css" rel="stylesheet" href="css/reset.css">
-    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <!-- Load CSS via Thymeleaf -->
+    <link rel="stylesheet" th:href="@{~/static/css/reset.css}"/>
+    <link rel="stylesheet" th:href="@{~/static/css/styles.css}"/>
+
+    <!-- Load custom fonts from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&display=swap" rel="stylesheet">
-    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&display=swap"
+          rel="stylesheet">
+    <title>HangmanIK</title>
 </head>
 <body>
 <div class="login-container">
+
     <h1>Sign Into Twitch</h1>
+
+    <!-- Login form -->
     <form action="bot" method="post">
+
+        <!-- Bot Name -->
         <div class="form-element-container">
             <label for="botName">Bot Name</label>
-            <input type="text" id="botName" name="botName" placeholder="HangmanIkBot">
+            <input type="text" id="botName" name="botName" placeholder="HangmanIkBot" th:value="${botName}"/>
         </div>
+
+        <!-- Chaneel -->
         <div class="form-element-container">
             <label for="channelName">Channel Name</label>
-            <input type="text" id="channelName" name="channelName" placeholder="darsinatas">
+            <input type="text" id="channelName" name="channelName" placeholder="darsinatas" th:value="${channel}"/>
         </div>
+
+        <!-- OAuth -->
         <div class="form-element-container">
             <label for="oauth">OAuth</label>
-            <input type="text" id="oauth" name="oauth" placeholder="oauth:YourAuthHere">
+            <input type="text" id="oauth" name="oauth" placeholder="oauth:YourAuthHere" th:value="${oauth}"/>
         </div>
+        
         <button id="connect-btn" type="submit">Connect</button>
     </form>
 </div>
