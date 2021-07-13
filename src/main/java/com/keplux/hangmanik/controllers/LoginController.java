@@ -1,4 +1,4 @@
-package com.keplux.hangmanik;
+package com.keplux.hangmanik.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
