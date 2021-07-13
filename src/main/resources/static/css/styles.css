@@ -43,6 +43,11 @@ input[type="text"] {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
 }
+
+input[type="text"]::placeholder {
+    color: #21514f;
+}
+
 input[type="text"]:hover,
 input[type="text"]:focus {
     border: #21514F 1px solid;

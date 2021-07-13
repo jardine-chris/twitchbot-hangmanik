@@ -1,0 +1,50 @@
+/* Style the navigation menu */
+.navbar {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.navbar #links {
+    display: none;
+}
+
+.navbar #home {
+    background-color: #21514f;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+/* Style navigation menu links */
+.navbar a {
+    background-color: #1f2833;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    transition: 0.2s;
+}
+
+/* Add a grey background color on mouse-over */
+.navbar a.link:hover {
+    filter: brightness(1.2);
+}
+
+/* Style the hamburger menu */
+#menu-button {
+    background-color: #0b0c10;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5em;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+    background-color: #21514f;
+    color: rgba(255, 255, 255, 0.7);
+}
