@@ -12,10 +12,18 @@
     <artifactId>HangmanIK</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>HangmanIK</name>
-    <description>Demo project for Spring Boot</description>
+    <description>A Twitch bot for playing the classic game Hangman.</description>
     <properties>
         <java.version>16</java.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -31,6 +39,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.gikkman</groupId>
+            <artifactId>Java-Twirk</artifactId>
+            <version>0.6.3</version>
         </dependency>
     </dependencies>
 
