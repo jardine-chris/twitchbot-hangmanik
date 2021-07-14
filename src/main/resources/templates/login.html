@@ -26,7 +26,7 @@
 
 <div th:insert="fragments/navbar :: navbar"></div>
 
-<div class="login-container">
+<div class="container">
 
     <h1>Sign Into Twitch</h1>
 
@@ -39,10 +39,10 @@
             <input type="text" id="botName" name="botName" placeholder="HangmanIkBot" th:value="${botName}"/>
         </div>
 
-        <!-- Chaneel -->
+        <!-- Channel -->
         <div class="form-element-container">
-            <label for="channelName">Channel Name</label>
-            <input type="text" id="channelName" name="channelName" placeholder="darsinatas" th:value="${channel}"/>
+            <label for="channel">Channel Name</label>
+            <input type="text" id="channel" name="channel" placeholder="darsinatas" th:value="${channel}"/>
         </div>
 
         <!-- OAuth -->
