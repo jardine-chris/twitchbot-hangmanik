@@ -1,9 +1,16 @@
 package com.keplux.hangmanik;
 
+import java.io.*;
+import java.util.Properties;
+
 public class TwitchConfiguration {
     private String botName;
     private String channel;
     private String oauth;
+
+    public TwitchConfiguration() {
+
+    }
 
     public TwitchConfiguration(TwitchConfigurationBuilder builder) {
         botName = builder.botName;
@@ -21,6 +28,33 @@ public class TwitchConfiguration {
 
     public String getOauth() {
         return oauth;
+    }
+
+    public void loadConfigFile() {
+        try (InputStream is = new FileInputStream("src/main/resources/static/config.properties")) {
+            Properties prop = new Properties();
+            prop.load(is);
+
+            botName = prop.getProperty("botName");
+            channel = prop.getProperty("channel");
+            oauth = prop.getProperty("oauth");
+
+            System.out.println("config.properties loaded.");
+        }
+        catch (FileNotFoundException e) {
+            try {
+                Properties prop = new Properties();
+                File file = new File("src/main/resources/static/config.properties");
+                prop.store(new FileOutputStream(file), "Create config.properties");
+                System.out.println("config.properties created.");
+            }
+            catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static class TwitchConfigurationBuilder {

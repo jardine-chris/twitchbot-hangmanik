@@ -10,6 +10,7 @@
   <link rel="stylesheet" th:href="@{~/static/css/reset.css}"/>
   <link rel="stylesheet" th:href="@{~/static/css/navbar.css}"/>
   <link rel="stylesheet" th:href="@{~/static/css/styles.css}"/>
+  <link rel="stylesheet" th:href="@{~/static/css/config.css}"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -51,7 +52,10 @@
       <input type="text" id="oauth" name="oauth" placeholder="oauth:YourAuthHere" th:value="${oauth}"/>
     </div>
 
-    <button id="connect-btn" type="submit">Connect</button>
+    <div id="dual-btn-container">
+      <button id="cancel-btn" class="dual-btn" type="submit">Cancel</button>
+      <button id="save-btn" class="dual-btn" type="submit">Save</button>
+    </div>
   </form>
 
   <script src="/static/js/navbar.js"></script>
