@@ -3,15 +3,13 @@ package com.keplux.hangmanik.controllers;
 import com.keplux.hangmanik.TwitchConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ConfigController {
 
     // When save button is pressed.
-    @RequestMapping(value = "/", method = RequestMethod.POST, params = "save")
+    @PostMapping (value = "/", params = "save")
     public String save(@ModelAttribute("botName") String botName,
                        @ModelAttribute("channel") String channel,
                        @ModelAttribute("oauth") String oauth) {
@@ -30,7 +28,7 @@ public class ConfigController {
     }
 
     // Load page and close button pressed.
-    @RequestMapping("/config")
+    @GetMapping ("/config")
     public String config(Model model) {
         TwitchConfiguration config = new TwitchConfiguration();
         config.loadConfigFile(model);
