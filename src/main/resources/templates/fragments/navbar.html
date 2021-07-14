@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<!-- Top Navigation Menu -->
+<div class="navbar" th:fragment="navbar">
+  <a href="/" id="home">hangmanIK</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="links">
+    <a href="/config" class="link">Edit Configuration</a>
+    <a href="#dictionary" class="link">Dictionary</a>
+    <a href="#about" class="link">About</a>
+  </div>
+
+<!-- Menu Button -->
+  <a href="javascript:void(0);" id="menu-button">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+</body>
+</html>

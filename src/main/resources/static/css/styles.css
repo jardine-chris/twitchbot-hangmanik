@@ -4,7 +4,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.login-container {
+.container {
     margin: 1em auto;
     padding: 1em;
     border-radius: 1em;
@@ -19,14 +19,14 @@ body {
 h1 {
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
     color: rgba(255, 255, 255, 0.5);
 }
 
 label {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     display: block;
     margin: 0.4em auto;
@@ -43,6 +43,11 @@ input[type="text"] {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
 }
+
+input[type="text"]::placeholder {
+    color: #21514f;
+}
+
 input[type="text"]:hover,
 input[type="text"]:focus {
     border: #21514F 1px solid;
@@ -54,7 +59,7 @@ input[type="text"]:focus {
     width: calc(100% - 4px);
     border-radius: 0.25em;
     border: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.7);

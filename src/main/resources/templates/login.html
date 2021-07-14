@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Load CSS via Thymeleaf -->
+    <link rel="stylesheet" th:href="@{~/static/css/reset.css}"/>
+    <link rel="stylesheet" th:href="@{~/static/css/navbar.css}"/>
+    <link rel="stylesheet" th:href="@{~/static/css/styles.css}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Load custom fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <title>HangmanIK</title>
+</head>
+<body>
+
+<div th:insert="fragments/navbar :: navbar"></div>
+
+<div class="container">
+
+    <h1>Sign Into Twitch</h1>
+
+    <!-- Login form -->
+    <form action="bot" method="post">
+
+        <!-- Bot Name -->
+        <div class="form-element-container">
+            <label for="botName">Bot Name</label>
+            <input type="text" id="botName" name="botName" placeholder="HangmanIkBot" th:value="${botName}"/>
+        </div>
+
+        <!-- Channel -->
+        <div class="form-element-container">
+            <label for="channel">Channel Name</label>
+            <input type="text" id="channel" name="channel" placeholder="darsinatas" th:value="${channel}"/>
+        </div>
+
+        <!-- OAuth -->
+        <div class="form-element-container">
+            <label for="oauth">OAuth</label>
+            <input type="text" id="oauth" name="oauth" placeholder="oauth:YourAuthHere" th:value="${oauth}"/>
+        </div>
+
+        <button id="connect-btn" type="submit">Connect</button>
+    </form>
+
+    <script src="/static/js/navbar.js"></script>
+
+</div>
+</body>
+</html>
