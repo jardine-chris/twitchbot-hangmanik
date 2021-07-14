@@ -82,8 +82,6 @@ public class TwitchConfiguration {
             model.addAttribute("botName", botName);
             model.addAttribute("channel", channel);
             model.addAttribute("oauth", oauth);
-
-            System.out.println("config.properties loaded.");
         }
         // If the file doesn't exist, create it.
         catch (FileNotFoundException e) {
