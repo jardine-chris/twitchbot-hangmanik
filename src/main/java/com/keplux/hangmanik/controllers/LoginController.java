@@ -16,7 +16,8 @@ public class LoginController {
     @RequestMapping("/")
     public String login(Model model) {
         TwitchConfiguration config = new TwitchConfiguration();
-        config.loadConfigFile();
+        config.loadConfigFile(model);
+
         return "login";
     }
 }
